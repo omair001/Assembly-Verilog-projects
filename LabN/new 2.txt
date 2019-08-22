@@ -1,0 +1,16 @@
+module fullAdder(Cout, z, a, b, Cin);
+ output Cout, z;
+ input a, b, c;
+ wire xor1, andl, andr;
+ xor(xor1, a, b);
+ xor(z, Cin, xor1);
+ and(andl, a, b);
+ and(andr, Cin, xor1);
+ or (Cout, andl, andr); 
+
+
+endmodule;
+
+module test()
+
+endmodule
